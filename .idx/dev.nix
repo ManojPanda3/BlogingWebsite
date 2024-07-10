@@ -17,6 +17,12 @@
     extensions = [
       # "vscodevim.vim"
       "dsznajder.es7-react-js-snippets"
+      "formulahendry.auto-close-tag"
+      "formulahendry.auto-complete-tag"
+      "formulahendry.auto-rename-tag"
+      "LaurentTreguier.vscode-simple-icons"
+      "redwan-hossain.auto-rename-tag-clone"
+      "bradlc.vscode-tailwindcss"
     ];
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file

@@ -1,0 +1,1 @@
+export const logo=import("@/public/logo.png");
