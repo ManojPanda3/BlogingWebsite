@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run NextJs",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run","dev","-p","5000","-H","0.0.0.0"],
+      "group": "build",
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
