@@ -18,21 +18,21 @@ const HeroSection = () => {
   return (
     <section
       id="hero-section"
-      className="opacity-0 flex justify-between p-24 my-10 min-w-[350px]"
+      className="opacity-0 flex justify-between md:p-28  my-2 min-w-[350px] gap-6 relative overflow-x-hidden h-[75vh] md:translate-y-2"
     >
-      <div className="flex items-start flex-col justify-center max-md:w-full max-md:items-center max-md:w-full">
+      <div className="flex items-start flex-col justify-center max-md:w-full max-md:items-center max-md:h-full md:min-w-[200px]">
         <h2 className="font-bold text-[3.5rem] max-md:text-[2.5rem]">Blog Love</h2>
-        <p className="text-gray-500" style={{transform:"translateY(-0.4rem)"}}>
+        <p className="max-md:text-gray-800 text-gray-500" style={{transform:"translateY(-0.4rem)"}}>
           Stories worth sharing.
         </p>
         <SingUp className="my-3">Get Started</SingUp>
       </div>
-      <div className="max-md:scale-0 max-md:absolute w-[50%] w-[560px] rounded-[1rem] overflow-hidden ">
+      <div className="top-0 left-0  max-md:absolute max-md:-z-10  max-md:opacity-50 max-md:rounded-none max-md:h-full h-[fit-content] md:max-w-[545px] rounded-[1rem] overflow-hidden ">
         <Image
           src={heroImage}
           height={720}
           width={1201}
-          className="h-[auto] w-full"
+          className="h-full w-full "
         />
       </div>
     </section>

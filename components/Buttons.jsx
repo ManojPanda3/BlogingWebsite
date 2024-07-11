@@ -11,7 +11,7 @@ export const Login= ({children,className}) => {
 
   };
   return (
-    <Button onClick={handleLogin} className={"hover:bg-gray-300  text-center cursor-pointer font-medium "+className}>{children}</Button>
+    <Button onClick={handleLogin} className={"hover:bg-gray-200  text-center cursor-pointer font-medium p-3 "+className}>{children}</Button>
   )
 }
 export const SingUp= ({children,className}) => {
