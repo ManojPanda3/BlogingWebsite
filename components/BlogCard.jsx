@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const BlogCard = () => {
   return (
     <section className="max-w-[10rem] max-w-[10rem]">
