@@ -33,6 +33,7 @@ const HeroSection = () => {
           height={720}
           width={1201}
           className="h-full w-full "
+          alt="Image"
         />
       </div>
     </section>
