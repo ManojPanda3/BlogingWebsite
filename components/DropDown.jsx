@@ -1,20 +1,59 @@
-"use client"
+"use client";
 import React, { useRef, useState } from "react";
 import Button from "./Buttons";
+import { dropDownIcon } from "@/utils";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const DropDown = () => {
-  const [isDown,setDown]=useState(true);
-  const dropDownRef=useRef(null);
-  const handleDropDown=()=>{
-    dropDownRef.current.style.transform=isDown?"scale(1)":"scale(0)";
-    setDown(n=>!n);
-  }
+  const [isDown, setDown] = useState(false);
+  const dropDownRef = useRef(null);
+
+  const handleDropDown = () => {
+    setDown((n) => !n);
+  };
+
+  useGSAP(() => {
+    if (isDown) {
+      gsap.fromTo(
+        dropDownRef.current,
+        {
+          y: -10,
+          opacity: 0,
+          scale: 0.8,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.3,
+          ease: "power3.out",
+        }
+      );
+    } else {
+      gsap.to(dropDownRef.current, {
+        y: -10,
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.2,
+        ease: "power3.in",
+      });
+    }
+  }, [isDown]); 
 
   return (
-    <div className="px-2">
+    <div className="p-2 relative flex gap-4 items-center bg-white">
       <p>sort by:</p>
-      <Button onClick={handleDropDown}>Newest</Button>
-      <ul id="sortby-list" ref={dropDownRef} className={"shadow-lg scale-0 shadow-black"}>
+      <Button
+        onClick={handleDropDown}
+        className="relative flex gap-2 font-semibold"
+      >
+        Newest <i className="text-xl aspect-square">{dropDownIcon}</i>
+      </Button>
+      <ul
+        ref={dropDownRef}
+        className="absolute top-8 left-14 shadow-lg scale-0 shadow-black transition-all duration-300 ease-in-out"
+      >
         <li className="border-solid border-black border-0 text-start p-3 hover:bg-blue-300">
           Popular
         </li>
