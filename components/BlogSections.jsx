@@ -4,8 +4,8 @@ import DropDown from "./DropDown";
 
 const BlogSections = () => {
   return (
-    <section className="w-full flex flex-col md:items-center">
-      <div className="md:w-[85%] mt-2 flex justify-between md:gap-10 max-md:flex-col">
+    <section className="w-full flex flex-col md:items-center animate-fadeAppear delay-200 transition-opacity">
+      <div className="md:w-[90%] mt-2 flex justify-between md:gap-10 max-md:flex-col">
         <div className="flex md:gap-10 max-md:gap-1">
           {blogSections.map((elm, index) => (
             <Button

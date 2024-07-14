@@ -30,6 +30,12 @@ const DropDown = () => {
           ease: "power3.out",
         }
       );
+      gsap.to(
+        "#dropDown-icon",
+        {
+         rotate:-180,
+        }
+      );
     } else {
       gsap.to(dropDownRef.current, {
         y: -10,
@@ -38,6 +44,12 @@ const DropDown = () => {
         duration: 0.2,
         ease: "power3.in",
       });
+      gsap.to(
+        "#dropDown-icon",
+        {
+         rotate:0,
+        }
+      );
     }
   }, [isDown]); 
 
@@ -48,7 +60,7 @@ const DropDown = () => {
         onClick={handleDropDown}
         className="relative flex gap-2 font-semibold"
       >
-        Newest <i className="text-xl aspect-square">{dropDownIcon}</i>
+        Newest <i className="text-xl aspect-square" id="dropDown-icon">{dropDownIcon}</i>
       </Button>
       <ul
         ref={dropDownRef}

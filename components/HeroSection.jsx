@@ -8,17 +8,17 @@ import gsap from "gsap";
 
 const HeroSection = () => {
   useGSAP(() => {
-    gsap.to('#hero-section', {
+    gsap.to('#hero-section',{
       y: 0,
       opacity: 1,
       duration:0.5,
-      ease: 'power3.inOut',
+      // ease: 'power3.inOut',
     });
   }, []);
   return (
     <section
       id="hero-section"
-      className="opacity-0 flex justify-between md:p-20 min-w-[350px] gap-6 relative overflow-x-hidden max-md:h-[75vh] max-md:my-2 md:my-14 md:translate-y-2"
+      className="flex opacity-0 justify-between md:p-28 min-w-[350px] gap-6 relative overflow-x-hidden max-md:h-[75vh] max-md:my-2 md:my-14 md:translate-y-2"
     >
       <div className="flex items-start flex-col justify-center max-md:w-full max-md:items-center max-md:h-full">
         <h2 className="font-bold text-[3.5rem] max-md:text-[2.5rem]">Blog Love</h2>
