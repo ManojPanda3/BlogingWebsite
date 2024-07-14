@@ -1,6 +1,6 @@
-import { bookmarkIcon, likeIcon } from "@/utils";
-import Image from "next/image";
-import Button from "./Buttons";
+
+import { bookmarkIcon, likeIcon, viewIcon } from "@/utils";
+import { BookmarkBtn, LikeBtn } from "./Buttons";
 
 const BlogCard = ({
   coverImage,
@@ -21,9 +21,9 @@ const BlogCard = ({
           // width={100}
         />
         <div className="w-full h-full bg-gradient-to-t hover:opacity-100 transition-opacity duration-500 opacity-0 from-black via-transparent to-black absolute top-0 left-0">
-        <div className="flex absolute w-full h-1/3 top-0">
-          <Button className="h-2 w-2">{likeIcon}</Button>
-          <Button className="h-2 w-2">{bookmarkIcon}</Button>
+        <div className="flex w-auto h-[15%] top-0 m-2 left-0 justify-end gap-2">
+          <LikeBtn>{likeIcon}</LikeBtn>
+          <BookmarkBtn>{bookmarkIcon}</BookmarkBtn>
         </div>
         </div>
       </div>
@@ -42,9 +42,9 @@ const BlogCard = ({
           <p className="name">{userName}</p>
         </div>
         <div className="details flex gap-1">
-          <i name="likeIcon"></i>
+          <i name="likeIcon">{likeIcon}</i>
           <p className="likes">{likes}</p>
-          <i name="viewsIcon"></i>
+          <i name="viewsIcon">{viewIcon}</i>
           <p className="views">{views}</p>
         </div>
       </div>
