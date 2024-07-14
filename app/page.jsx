@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
-    <main className={"bg-white" + inter.className}>
+    <main className={"bg-white min-w-[350px] " + inter.className}>
       <NavBar />
       <HeroSection />
       <BlogSections/>

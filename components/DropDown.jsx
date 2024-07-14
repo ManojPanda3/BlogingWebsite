@@ -64,7 +64,7 @@ const DropDown = () => {
       </Button>
       <ul
         ref={dropDownRef}
-        className="absolute top-8 left-14 shadow-lg scale-0 shadow-black transition-all duration-300 ease-in-out"
+        className="absolute top-8 left-14 shadow-lg scale-0 shadow-black transition-all z-10 bg-white duration-300 ease-in-out"
       >
         <li className="border-solid border-black border-0 text-start p-3 hover:bg-blue-300">
           Popular

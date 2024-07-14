@@ -13,8 +13,11 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       animation: {
-        fadeAppear: 'fade-appear 1s cubic-bezier(.59,0,.45,1.01) 1s',
-      }
+        fadeAppear: 'fade-appear 1s cubic-bezier(.59,0,.45,1.01)',
+      },
+      gridTemplateColumns: {
+        'fit': 'repeat(auto-fill, minmax(300px, 1fr))',
+      },
     },
   },
   plugins: [],
