@@ -1,4 +1,3 @@
-
 import { bookmarkIcon, likeIcon, viewIcon } from "@/utils";
 import { BookmarkBtn, LikeBtn } from "./Buttons";
 
@@ -41,10 +40,10 @@ const BlogCard = ({
           />
           <p className="name">{userName}</p>
         </div>
-        <div className="details flex gap-1">
-          <i name="likeIcon">{likeIcon}</i>
+        <div className="details flex gap-1 items-center">
+          <i name="likeIcon" className="h-[1.5rem]">{likeIcon}</i>
           <p className="likes">{likes}</p>
-          <i name="viewsIcon">{viewIcon}</i>
+          <i name="viewsIcon" className="h-[2rem]">{viewIcon}</i>
           <p className="views">{views}</p>
         </div>
       </div>

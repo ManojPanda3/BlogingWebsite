@@ -5,10 +5,13 @@
 @keyframes fade-appear {
   from{
     opacity:0;
-    /* transform: translateY(10rem); */
   }
   to{
     opacity:1;
-    /* transform: translateY(0rem); */
   }
+}
+
+html,body{
+  height:100%;
+  width:100%;
 }

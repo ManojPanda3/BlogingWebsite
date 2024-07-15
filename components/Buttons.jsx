@@ -1,16 +1,15 @@
 "use client";
 import React, { useRef, useState } from "react";
 
-const Button = ({ children, className, style, onClick, id, Ref }) => {
+const Button = (props) => {
   return (
     <button
-      onClick={onClick}
-      className={className}
-      style={style}
-      ref={Ref}
-      id={id}
+      {
+        ...props
+      }
+      ref={props.Ref}
     >
-      {children}
+      {props.children}
     </button>
   );
 };
